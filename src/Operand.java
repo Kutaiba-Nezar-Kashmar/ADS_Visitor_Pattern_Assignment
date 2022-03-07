@@ -11,7 +11,7 @@ public class Operand extends Token {
 
     public int getValue()
     {
-        return 0;
+      return value;
     }
 
 }

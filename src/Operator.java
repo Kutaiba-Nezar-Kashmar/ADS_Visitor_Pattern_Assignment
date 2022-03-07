@@ -10,6 +10,6 @@ public class Operator extends Token {
 
     public Operation getOperation()
     {
-        return null;
+       return operation;
     }
 }
