@@ -1,8 +1,8 @@
 import java.util.EmptyStackException;
 
-public class LinkedList<T> implements List
+public class LinkedList<T> implements List<T>
 {
-    private Node head;
+    private Node<T> head;
     private int size;
 
 public LinkedList(Node head, int size){
@@ -22,17 +22,20 @@ public LinkedList(Node head, int size){
     }
 
     @Override
-    public void addToFront(Object data) {
+    public void addToFront(T data) {
         Node node = new Node();
         node.setData(data);
         node.setNext(head);
         head = node;
-
+        size++;
     }
 
     @Override
-    public Object removeFirst() throws EmptyStackException {
-        return head = head.getNext();
+    public T removeFirst() throws EmptyStackException {
+    T tem = head.getData();
+    head = head.getNext();
+    size--;
+    return tem;
 
     }
 }
