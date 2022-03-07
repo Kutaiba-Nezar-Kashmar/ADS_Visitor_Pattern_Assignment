@@ -1,4 +1,4 @@
-public class Operator {
+public class Operator extends Token {
 
     Operation operation;
 
