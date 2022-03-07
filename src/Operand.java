@@ -1,4 +1,4 @@
-public class Operand {
+public class Operand extends Token {
 
     private int value;
 
