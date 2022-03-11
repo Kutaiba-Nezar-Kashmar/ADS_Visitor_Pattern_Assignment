@@ -1,17 +1,21 @@
-public class Operand extends Token {
+public class Operand extends Token
+{
 
-    private int value;
+  private int value;
 
+  public Operand(int value)
+  {
+    this.value = value;
+  }
 
-    public void accept(CalculatorVisitor visitor)
-    {
+  public void accept(CalculatorVisitor visitor)
+  {
+    visitor.visit(this);
+  }
 
-    }
-
-
-    public int getValue()
-    {
-      return value;
-    }
+  public int getValue()
+  {
+    return value;
+  }
 
 }
