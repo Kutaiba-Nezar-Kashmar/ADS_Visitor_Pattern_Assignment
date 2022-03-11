@@ -32,9 +32,7 @@ class LinkedStackTest {
 
     @Test
     public void pop_ListIsEmpty_ThrowsEmptyStackException(){
-        assertThrows(EmptyStackException.class, ()->{
-           linkedStack.pop();
-        });
+        assertThrows(EmptyStackException.class, ()-> linkedStack.pop());
     }
 
     @Test
@@ -67,5 +65,5 @@ class LinkedStackTest {
         assertEquals(second, retrievedToken);
     }
 
-    
+
 }
