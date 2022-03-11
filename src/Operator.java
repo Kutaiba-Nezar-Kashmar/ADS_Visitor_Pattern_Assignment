@@ -3,6 +3,8 @@ public class Operator extends Token {
     Operation operation;
 
     public Operator(Operation operation) {
+        if (operation==null)
+            throw new RuntimeException("Operation cannot bu null");
         this.operation = operation;
     }
 
@@ -14,4 +16,6 @@ public class Operator extends Token {
     public Operation getOperation() {
         return operation;
     }
+
+
 }
